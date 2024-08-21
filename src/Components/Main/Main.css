@@ -1,0 +1,13 @@
+.container {
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  background-color: rgba(0, 0, 0, 0.3);
+  margin: 0;
+  padding: 0;
+}
+
+#myVideo {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
