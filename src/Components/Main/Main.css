@@ -1,13 +1,64 @@
 .container {
   width: 100%;
   height: 100vh; /* Full viewport height */
-  background-color: rgba(0, 0, 0, 0.3);
   margin: 0;
   padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #myVideo {
   width: 100%;
   height: 100vh;
   object-fit: cover;
+}
+
+.className {
+  position: absolute;
+  text-align: center;
+  background-image: url("../../Images/watercolor-abstract-circles-background.png");
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  mix-blend-mode: multiply;
+  opacity: 0.9; /* Increased opacity */
+}
+
+.bcg {
+  background-image: url("../../Images/landing-page3a.png");
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  opacity: 0.6; /* Increased opacity */
+}
+
+.content {
+  background-image: url("../../Images/landing-page1.png");
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  opacity: 0.9; /* Increased opacity */
+  top: 30%;
+  left: 50%;
+  transform: rotate(-135deg);
+  mix-blend-mode: multiply;
+}
+
+/* Vendor prefixes for cross-browser compatibility */
+.content {
+  -webkit-transform: rotate(-35deg);
+  -moz-transform: rotate(-35deg);
+  -ms-transform: rotate(-35deg);
+  -o-transform: rotate(-35deg);
+  transform: rotate(-35deg);
+  -webkit-mix-blend-mode: multiply;
+  -moz-mix-blend-mode: multiply;
+  -ms-mix-blend-mode: multiply;
+  -o-mix-blend-mode: multiply;
+  mix-blend-mode: multiply;
 }

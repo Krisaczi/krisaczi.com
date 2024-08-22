@@ -16,6 +16,10 @@ const Main = () => {
           id="myVideo"
           onError={handleVideoError}
         ></video>
+        <div className="className">
+          <div className="bcg"></div>
+          <div className="content"></div>
+        </div>
       </div>
     </>
   );
