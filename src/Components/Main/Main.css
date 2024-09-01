@@ -9,7 +9,7 @@
 }
 
 .container {
-  width: 100%;
+  width: 100vw;
   height: 100vh; /* Full viewport height */
   margin: 0;
   padding: 0;
@@ -60,19 +60,24 @@
   mix-blend-mode: multiply;
 }
 
+.content-text {
+  position: absolute;
+  transform: rotate(35deg);
+  margin-top: -295px;
+}
+
 .page-title {
   font-family: "At";
   font-size: 60px;
 }
 
 .intro {
-  width: 500px;
+  width: 600px;
   text-align: justify;
-
   font-family: "Cinzel";
-  font-weight: 600;
+  font-weight: 400;
+  font-size: 20px;
   color: black;
-
   text-align: center;
 }
 

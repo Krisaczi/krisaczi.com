@@ -1,5 +1,6 @@
 import "./Main.css";
 import videoBg from "../../Images/video.mp4";
+import Navbar from "../Navbar/Navbar";
 
 const Main = () => {
   const handleVideoError = (e) => {

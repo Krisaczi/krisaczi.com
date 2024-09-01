@@ -1,0 +1,24 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  background-image: url("../../Images/KrisAcziV4.png");
+  width: 400px;
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.menu-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 500px;
+  list-style-type: none;
+  font-family: "Cinzel";
+}
