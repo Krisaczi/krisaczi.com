@@ -3,11 +3,14 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  height: 150px;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .logo {
   background-image: url("../../Images/KrisAcziV4.png");
-  width: 400px;
+  width: 300px;
   height: 200px;
   background-position: center;
   background-repeat: no-repeat;
@@ -18,7 +21,7 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  width: 500px;
+  gap: 50px;
   list-style-type: none;
   font-family: "Cinzel";
 }
