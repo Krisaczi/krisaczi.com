@@ -11,8 +11,6 @@ const Main = () => {
       <div className="container">
         <video
           src={videoBg}
-          autoPlay
-          loop
           muted
           id="myVideo"
           onError={handleVideoError}

@@ -9,8 +9,6 @@
 }
 
 .container {
-  width: 100vw;
-  height: 100vh; /* Full viewport height */
   margin: 0;
   padding: 0;
   display: flex;
@@ -21,7 +19,7 @@
 }
 
 #myVideo {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   object-fit: cover;
   mix-blend-mode: multiply;
@@ -30,14 +28,15 @@
 .className {
   position: absolute;
   text-align: center;
-  background-image: url("../../Images/watercolor-abstract-circles-background.png");
   width: 100%;
   height: 100vh;
+  background-image: url("../../Images/watercolor-abstract-circles-background.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   mix-blend-mode: multiply;
   opacity: 0.9;
+  z-index: 1;
 }
 
 .bcg {
