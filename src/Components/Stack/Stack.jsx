@@ -3,15 +3,17 @@ import "./Stack.css";
 
 const Stack = () => {
   return (
-    <div className="wrapper">
+    <div className="stackWrapper">
       <div className="contentStack">
         {stack.map((item) => {
           return item.display ? (
-            <div>
+            <div className="stackBcg">
               {" "}
-              <p>{item.technology} </p>
               <div className="stackBox">
-                <img src={item.logo} alt="" />
+                <p>{item.technology} </p>
+                <div>
+                  <img className="stackLogo" src={item.logo} alt="" />
+                </div>
               </div>
             </div>
           ) : (

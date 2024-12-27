@@ -1,3 +1,12 @@
+.stackWrapper {
+  background-image: url("../../Images/landing-page3a.png");
+  width: 1920px;
+  height: 1080px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .contentStack {
   max-width: 1000px;
   margin: 0 auto;
@@ -5,11 +14,26 @@
   justify-content: space-between;
 }
 
-.stackBox {
+.stackBcg {
   background-image: url("../../Images/landing-page1.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 300px;
-  height: 300px;
+  width: 340px;
+  height: 320px;
+
+  transform: rotate(-50deg);
+}
+
+.stackBox {
+  position: relative;
+  transform: rotate(50deg);
+  top: 65px;
+
+  text-align: center;
+}
+
+.stackLogo {
+  width: 111px;
+  height: 125px;
 }
