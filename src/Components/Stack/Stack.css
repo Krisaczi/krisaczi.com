@@ -1,17 +1,30 @@
-.stackWrapper {
+.stackContainer {
   background-image: url("../../Images/landing-page3a.png");
-  width: 1920px;
-  height: 1080px;
+}
+
+.stackEffect {
+  background-image: url("../../Images/landing-page1.png");
+  transform: rotate(-135deg);
+
+  margin-top: -217px;
+  mix-blend-mode: multiply;
+}
+
+.stackWrapper {
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: rgba(215, 193, 156, 0.4);
+  mix-blend-mode: multiply;
 }
 
 .contentStack {
-  max-width: 1000px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .stackBcg {
@@ -21,7 +34,6 @@
   background-size: contain;
   width: 340px;
   height: 320px;
-
   transform: rotate(-50deg);
 }
 
