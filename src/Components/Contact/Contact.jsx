@@ -1,17 +1,117 @@
-const Contact = () => {
+import React, { useState } from "react";
+import emailjs from "emailjs-com";
+
+const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    mail: "",
+    budget: "",
+    message: "",
+    agree: false,
+  });
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData({
+      ...formData,
+      [name]: type === "checkbox" ? checked : value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!formData.agree) {
+      alert("You must agree with the privacy policy.");
+      return;
+    }
+
+    const templateParams = {
+      name: formData.name,
+      mail: formData.mail,
+      budget: formData.budget,
+      message: formData.message,
+    };
+
+    emailjs
+      .send(
+        "YOUR_SERVICE_ID",
+        "YOUR_TEMPLATE_ID",
+        templateParams,
+        "YOUR_USER_ID"
+      )
+      .then((response) => {
+        console.log("Email successfully sent!", response.status, response.text);
+        alert("Email sent successfully!");
+      })
+      .catch((error) => {
+        console.error("Failed to send email. Error:", error);
+        alert("Failed to send email.");
+      });
+  };
+
   return (
-    <>
-      <form action="send_email.php" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-        <input type="submit" value="Send" />
-      </form>
-    </>
+    <form
+      onSubmit={handleSubmit}
+      style={{
+        backgroundColor: "#f5e6d3",
+        padding: "20px",
+        maxWidth: "400px",
+        margin: "auto",
+      }}
+    >
+      <div>
+        <label>Name</label>
+        <input
+          type="text"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          style={{ display: "block", width: "100%", marginBottom: "10px" }}
+        />
+      </div>
+      <div>
+        <label>Mail</label>
+        <input
+          type="email"
+          name="mail"
+          value={formData.mail}
+          onChange={handleChange}
+          style={{ display: "block", width: "100%", marginBottom: "10px" }}
+        />
+      </div>
+      <div>
+        <label>Budget</label>
+        <input
+          type="text"
+          name="budget"
+          value={formData.budget}
+          onChange={handleChange}
+          style={{ display: "block", width: "100%", marginBottom: "10px" }}
+        />
+      </div>
+      <div>
+        <label>Message</label>
+        <textarea
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          style={{ display: "block", width: "100%", marginBottom: "10px" }}
+        />
+      </div>
+      <div>
+        <input
+          type="checkbox"
+          name="agree"
+          checked={formData.agree}
+          onChange={handleChange}
+        />
+        <label>I AGREE WITH THE PRIVACY POLICY</label>
+      </div>
+      <button type="submit" style={{ display: "block", marginTop: "10px" }}>
+        SUBMIT
+      </button>
+    </form>
   );
 };
 
-export default Contact;
+export default ContactForm;
