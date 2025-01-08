@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
+import "./Contact.css";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -50,67 +51,63 @@ const ContactForm = () => {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      style={{
-        backgroundColor: "#f5e6d3",
-        padding: "20px",
-        maxWidth: "400px",
-        margin: "auto",
-      }}
-    >
-      <div>
-        <label>Name</label>
-        <input
-          type="text"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          style={{ display: "block", width: "100%", marginBottom: "10px" }}
-        />
-      </div>
-      <div>
-        <label>Mail</label>
-        <input
-          type="email"
-          name="mail"
-          value={formData.mail}
-          onChange={handleChange}
-          style={{ display: "block", width: "100%", marginBottom: "10px" }}
-        />
-      </div>
-      <div>
-        <label>Budget</label>
-        <input
-          type="text"
-          name="budget"
-          value={formData.budget}
-          onChange={handleChange}
-          style={{ display: "block", width: "100%", marginBottom: "10px" }}
-        />
-      </div>
-      <div>
-        <label>Message</label>
-        <textarea
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-          style={{ display: "block", width: "100%", marginBottom: "10px" }}
-        />
-      </div>
-      <div>
-        <input
-          type="checkbox"
-          name="agree"
-          checked={formData.agree}
-          onChange={handleChange}
-        />
-        <label>I AGREE WITH THE PRIVACY POLICY</label>
-      </div>
-      <button type="submit" style={{ display: "block", marginTop: "10px" }}>
-        SUBMIT
-      </button>
-    </form>
+    <div className="contactWrapper">
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label>Name</label>
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            style={{ display: "block", width: "100%", marginBottom: "10px" }}
+          />
+        </div>
+        <div>
+          <label>Mail</label>
+          <input
+            type="email"
+            name="mail"
+            value={formData.mail}
+            onChange={handleChange}
+            style={{ display: "block", width: "100%", marginBottom: "10px" }}
+          />
+        </div>
+        <div>
+          <label>Budget</label>
+          <input
+            type="text"
+            name="budget"
+            value={formData.budget}
+            onChange={handleChange}
+            style={{ display: "block", width: "100%", marginBottom: "10px" }}
+          />
+        </div>
+        <div>
+          <label>Message</label>
+          <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            style={{ display: "block", width: "100%", marginBottom: "10px" }}
+          />
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            name="agree"
+            checked={formData.agree}
+            onChange={handleChange}
+          />
+          <label className="contactConsent">
+            I AGREE WITH THE PRIVACY POLICY
+          </label>
+        </div>
+        <button type="submit" style={{ display: "block", marginTop: "10px" }}>
+          SUBMIT
+        </button>
+      </form>
+    </div>
   );
 };
 

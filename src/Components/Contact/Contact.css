@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "At";
+  src:
+    url("../../Fonts/Atziluth.otf") format("woff2"),
+    url("../../Fonts/Atziluth.otf") format("woff"),
+    url("../../Fonts/Atziluth.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.contactWrapper {
+  background-image: url("../../Images/landing-page3a.png");
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input {
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 1);
+
+  opacity: 0.1;
+}
+
+label {
+  font-family: "At";
+  font-size: 30px;
+}
+
+.contactConsent {
+  font-family: Cinzel;
+}
