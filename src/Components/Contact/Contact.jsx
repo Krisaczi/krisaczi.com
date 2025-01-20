@@ -53,86 +53,88 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="contactWrapper">
-      <Navbar />
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Name</label>
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            style={{ display: "block", width: "100%", marginBottom: "10px" }}
-          />
-        </div>
-        <div>
-          <label>Mail</label>
-          <input
-            type="email"
-            name="mail"
-            value={formData.mail}
-            onChange={handleChange}
-            style={{ display: "block", width: "100%", marginBottom: "10px" }}
-          />
-        </div>
-        <div>
-          <label>Budget</label>
-          <input
-            type="text"
-            name="budget"
-            value={formData.budget}
-            onChange={handleChange}
-            style={{ display: "block", width: "100%", marginBottom: "10px" }}
-          />
-        </div>
-        <div>
-          <label>Message</label>
-          <textarea
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            style={{ display: "block", width: "100%", marginBottom: "10px" }}
-          />
-        </div>
-        <div>
-          <input
-            type="checkbox"
-            name="agree"
-            checked={formData.agree}
-            onChange={handleChange}
-          />
-          <label className="contactConsent">
-            I AGREE WITH THE PRIVACY POLICY
-          </label>
-        </div>
-        <button type="submit" style={{ display: "block", marginTop: "10px" }}>
-          SUBMIT
-        </button>
-      </form>
+    <div className="contactContainer">
+      <div className="contactWrapper">
+        <Navbar />
+        <form onSubmit={handleSubmit}>
+          <div>
+            <label>Name</label>
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              style={{ display: "block", width: "100%", marginBottom: "10px" }}
+            />
+          </div>
+          <div>
+            <label>Mail</label>
+            <input
+              type="email"
+              name="mail"
+              value={formData.mail}
+              onChange={handleChange}
+              style={{ display: "block", width: "100%", marginBottom: "10px" }}
+            />
+          </div>
+          <div>
+            <label>Budget</label>
+            <input
+              type="text"
+              name="budget"
+              value={formData.budget}
+              onChange={handleChange}
+              style={{ display: "block", width: "100%", marginBottom: "10px" }}
+            />
+          </div>
+          <div>
+            <label>Message</label>
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              style={{ display: "block", width: "100%", marginBottom: "10px" }}
+            />
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              name="agree"
+              checked={formData.agree}
+              onChange={handleChange}
+            />
+            <label className="contactConsent">
+              I AGREE WITH THE PRIVACY POLICY
+            </label>
+          </div>
+          <button type="submit" style={{ display: "block", marginTop: "10px" }}>
+            SUBMIT
+          </button>
+        </form>
 
-      <footer>
-        <div className="footerWraper">
-          <div className="footerLogo">
-            <img className="logo" src={logo} alt="company's logo" />
-          </div>
-          <div className="footerLinks">
-            <div className="links">
-              <a className="footerLink" href="">
-                OFFER
-              </a>
-              <a className="footerLink" href="">
-                MY PROJECTS
-              </a>
-              <a className="footerLink" href="">
-                CONTACT
-              </a>
+        <footer>
+          <div className="footerWraper">
+            <div className="footerLogo">
+              <img className="logo" src={logo} alt="company's logo" />
             </div>
-            <div className="footerCopyRights">&copy; KrisAczi 2025</div>
+            <div className="footerLinks">
+              <div className="links">
+                <a className="footerLink" href="">
+                  OFFER
+                </a>
+                <a className="footerLink" href="">
+                  MY PROJECTS
+                </a>
+                <a className="footerLink" href="">
+                  CONTACT
+                </a>
+              </div>
+              <div className="footerCopyRights">&copy; KrisAczi 2025</div>
+            </div>
+            <div className="socials">LinkedIn</div>
           </div>
-          <div className="socials">LinkedIn</div>
-        </div>
-      </footer>
+        </footer>
+      </div>
     </div>
   );
 };

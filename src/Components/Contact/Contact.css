@@ -8,6 +8,11 @@
   font-style: normal;
 }
 
+.contactContainer {
+  background: rgba(215, 193, 156, 0.4);
+  mix-blend-mode: multiply;
+}
+
 .contactWrapper {
   background-image: url("../../Images/landing-page3a.png");
   height: 100vh;
@@ -15,6 +20,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  mix-blend-mode: multiply;
 }
 input {
   border: none;
