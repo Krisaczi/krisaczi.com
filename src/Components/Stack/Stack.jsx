@@ -1,11 +1,12 @@
 import stack from "../../data/stack";
+import Navbar from "../Navbar/Navbar";
 import "./Stack.css";
 
 const Stack = () => {
   return (
     <div className="stackContainer">
-      <div className="stackEffect"></div>
       <div className="stackWrapper">
+        <Navbar />
         <div className="contentStack">
           {stack.map((item) => {
             return item.display ? (

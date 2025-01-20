@@ -19,6 +19,7 @@ const Main = () => {
         <div className="className">
           <Navbar />
           <div className="bcg"></div>
+
           <div className="content">
             <div className="content-text"></div>
           </div>

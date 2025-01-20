@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import "./Contact.css";
+import Navbar from "../Navbar/Navbar";
+import logo from "../../Images/KrisAcziV4.png";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -52,6 +54,7 @@ const ContactForm = () => {
 
   return (
     <div className="contactWrapper">
+      <Navbar />
       <form onSubmit={handleSubmit}>
         <div>
           <label>Name</label>
@@ -107,6 +110,29 @@ const ContactForm = () => {
           SUBMIT
         </button>
       </form>
+
+      <footer>
+        <div className="footerWraper">
+          <div className="footerLogo">
+            <img className="logo" src={logo} alt="company's logo" />
+          </div>
+          <div className="footerLinks">
+            <div className="links">
+              <a className="footerLink" href="">
+                OFFER
+              </a>
+              <a className="footerLink" href="">
+                MY PROJECTS
+              </a>
+              <a className="footerLink" href="">
+                CONTACT
+              </a>
+            </div>
+            <div className="footerCopyRights">&copy; KrisAczi 2025</div>
+          </div>
+          <div className="socials">LinkedIn</div>
+        </div>
+      </footer>
     </div>
   );
 };
