@@ -1,10 +1,13 @@
 import "./Navbar.css";
+import logo from "../../Images/KrisAcziV4.png";
 
 const Navbar = () => {
   return (
     <>
       <nav>
-        <div className="logo"></div>
+        <div>
+          <img className="logo" src={logo} alt="copmany's logo" />
+        </div>
         <div className="menu">
           <ul className="menu-items">
             <li>OFFER</li>

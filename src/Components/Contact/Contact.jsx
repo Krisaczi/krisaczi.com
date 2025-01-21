@@ -57,7 +57,7 @@ const ContactForm = () => {
       <div className="contactWrapper">
         <Navbar />
         <form onSubmit={handleSubmit}>
-          <div>
+          <div className="contactInputField">
             <label>Name</label>
             <input
               type="text"
@@ -67,7 +67,7 @@ const ContactForm = () => {
               style={{ display: "block", width: "100%", marginBottom: "10px" }}
             />
           </div>
-          <div>
+          <div className="contactInputField">
             <label>Mail</label>
             <input
               type="email"
@@ -77,7 +77,7 @@ const ContactForm = () => {
               style={{ display: "block", width: "100%", marginBottom: "10px" }}
             />
           </div>
-          <div>
+          <div className="contactInputField">
             <label>Budget</label>
             <input
               type="text"
