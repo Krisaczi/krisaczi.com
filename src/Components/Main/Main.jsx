@@ -9,6 +9,8 @@ const Main = () => {
   return (
     <>
       <div className="container">
+        <div className="stackEffect"></div>
+
         <video
           src={videoBg}
           muted

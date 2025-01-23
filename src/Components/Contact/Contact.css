@@ -14,7 +14,6 @@
 }
 
 .contactWrapper {
-  background-image: url("../../Images/landing-page3a.png");
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -34,7 +33,7 @@
 input {
   border: none;
   mix-blend-mode: multiply;
-  opacity: 0.1;
+
   position: relative;
 }
 input:focus {
@@ -63,7 +62,7 @@ label {
   font-family: Cinzel;
 }
 footer {
-  width: 100%;
+  width: 90%;
 }
 .footerWraper {
   width: 100%;
