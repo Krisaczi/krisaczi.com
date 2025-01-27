@@ -18,6 +18,7 @@ const ContactForm = () => {
     setFormData({
       ...formData,
       [name]: type === "checkbox" ? checked : value,
+      honeypot: e.target.form.honeypot.value,
     });
   };
 
@@ -25,6 +26,10 @@ const ContactForm = () => {
     e.preventDefault();
     if (!formData.agree) {
       alert("You must agree with the privacy policy.");
+      return;
+    }
+    if (formData.honeypot) {
+      alert("Bot detected, no email sent.");
       return;
     }
 
@@ -53,7 +58,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="contactContainer">
+    <div id="CONTACT" className="contactContainer">
       <div className="contactWrapper">
         <Navbar />
         <form onSubmit={handleSubmit}>
@@ -64,7 +69,7 @@ const ContactForm = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              style={{ display: "block", width: "100%", marginBottom: "10px" }}
+              required
             />
           </div>
           <div className="contactInputField">
@@ -74,7 +79,7 @@ const ContactForm = () => {
               name="mail"
               value={formData.mail}
               onChange={handleChange}
-              style={{ display: "block", width: "100%", marginBottom: "10px" }}
+              required
             />
           </div>
           <div className="contactInputField">
@@ -84,54 +89,62 @@ const ContactForm = () => {
               name="budget"
               value={formData.budget}
               onChange={handleChange}
-              style={{ display: "block", width: "100%", marginBottom: "10px" }}
             />
           </div>
           <div>
+            <input type="text" name="honeypot" style={{ display: "none" }} />
+          </div>
+          <div className="contactMessageWrapper">
             <label>Message</label>
             <textarea
+              className="contactMessage"
               name="message"
               value={formData.message}
               onChange={handleChange}
-              style={{ display: "block", width: "100%", marginBottom: "10px" }}
+              rows="10"
             />
           </div>
-          <div>
+          <div className="consentWrapper">
             <input
+              className="consentChecbox"
               type="checkbox"
               name="agree"
               checked={formData.agree}
               onChange={handleChange}
             />
-            <label className="contactConsent">
-              I AGREE WITH THE PRIVACY POLICY
-            </label>
+            <label className="contactConsent">I AM NOT A ROBOT</label>
+            <button
+              className="button"
+              type="submit"
+              style={{ display: "block", marginTop: "10px" }}
+            >
+              SUBMIT
+            </button>
           </div>
-          <button type="submit" style={{ display: "block", marginTop: "10px" }}>
-            SUBMIT
-          </button>
         </form>
 
         <footer>
           <div className="footerWraper">
             <div className="footerLogo">
-              <img className="logo" src={logo} alt="company's logo" />
+              <a href="#MAIN">
+                <img className="logo" src={logo} alt="copmany's logo" />
+              </a>
             </div>
             <div className="footerLinks">
               <div className="links">
-                <a className="footerLink" href="">
+                <a className="footerLink" href="#OFFER">
                   OFFER
                 </a>
-                <a className="footerLink" href="">
+                <a className="footerLink" href="#MY PROJECTS">
                   MY PROJECTS
                 </a>
-                <a className="footerLink" href="">
+                <a className="footerLink" href="#CONTACT">
                   CONTACT
                 </a>
               </div>
               <div className="footerCopyRights">&copy; KrisAczi 2025</div>
             </div>
-            <div className="socials">LinkedIn</div>
+            <div className="socials"></div>
           </div>
         </footer>
       </div>

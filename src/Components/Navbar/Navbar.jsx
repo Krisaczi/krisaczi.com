@@ -6,13 +6,27 @@ const Navbar = () => {
     <>
       <nav>
         <div>
-          <img className="logo" src={logo} alt="copmany's logo" />
+          <a href="#MAIN">
+            <img className="logo" src={logo} alt="copmany's logo" />
+          </a>
         </div>
         <div className="menu">
           <ul className="menu-items">
-            <li>OFFER</li>
-            <li>MY PROJECTS</li>
-            <li>CONTACT</li>
+            <li>
+              <a className="menuLinks" href="#OFFER">
+                OFFER
+              </a>
+            </li>
+            <li>
+              <a className="menuLinks" href="#MY PROJECTS">
+                MY PROJECTS
+              </a>
+            </li>
+            <li>
+              <a className="menuLinks" href="#CONTACT">
+                CONTACT
+              </a>
+            </li>
           </ul>
         </div>
       </nav>

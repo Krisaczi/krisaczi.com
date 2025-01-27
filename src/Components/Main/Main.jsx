@@ -8,7 +8,7 @@ const Main = () => {
   };
   return (
     <>
-      <div className="container">
+      <div id="MAIN" className="container">
         <div className="stackEffect"></div>
 
         <video

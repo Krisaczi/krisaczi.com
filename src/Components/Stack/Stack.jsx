@@ -1,14 +1,14 @@
 import stack from "../../data/stack";
 import Navbar from "../Navbar/Navbar";
-import effect from "../../Images/stack-effect.png";
 
 import "./Stack.css";
 
 const Stack = () => {
   return (
-    <div className="stackContainer">
+    <div id="OFFER" className="stackContainer">
       <div className="stackWrapper">
         <Navbar />
+        <h2 className="offerTitle">OFFER</h2>
         <div className="contentStack">
           {stack.map((item, index) => {
             return item.display ? (
