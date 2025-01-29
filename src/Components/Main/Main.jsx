@@ -13,6 +13,7 @@ const Main = () => {
 
         <video
           src={videoBg}
+          autoPlay
           muted
           id="myVideo"
           onError={handleVideoError}

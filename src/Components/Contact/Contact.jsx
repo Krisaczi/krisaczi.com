@@ -22,6 +22,16 @@ const ContactForm = () => {
     });
   };
 
+  const validateName = (name) => {
+    const nameRegex = /^[a-zA-Z\s]*$/;
+    return nameRegex.test(name);
+  };
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!formData.agree) {
@@ -30,6 +40,14 @@ const ContactForm = () => {
     }
     if (formData.honeypot) {
       alert("Bot detected, no email sent.");
+      return;
+    }
+    if (!validateName(formData.name)) {
+      alert("Please enter a valid name.");
+      return;
+    }
+    if (!validateEmail(formData.mail)) {
+      alert("Please enter a valid email.");
       return;
     }
 
@@ -63,8 +81,9 @@ const ContactForm = () => {
         <Navbar />
         <form onSubmit={handleSubmit}>
           <div className="contactInputField">
-            <label>Name</label>
+            <label htmlFor="name">Name</label>
             <input
+              id="name"
               type="text"
               name="name"
               value={formData.name}
@@ -73,8 +92,9 @@ const ContactForm = () => {
             />
           </div>
           <div className="contactInputField">
-            <label>Mail</label>
+            <label htmlFor="mail">Mail</label>
             <input
+              id="mail"
               type="email"
               name="mail"
               value={formData.mail}
@@ -83,7 +103,7 @@ const ContactForm = () => {
             />
           </div>
           <div className="contactInputField">
-            <label>Budget</label>
+            <label htmlFor="budget">Budget</label>
             <input
               type="text"
               name="budget"
@@ -105,19 +125,18 @@ const ContactForm = () => {
             />
           </div>
           <div className="consentWrapper">
-            <input
-              className="consentChecbox"
-              type="checkbox"
-              name="agree"
-              checked={formData.agree}
-              onChange={handleChange}
-            />
-            <label className="contactConsent">I AM NOT A ROBOT</label>
-            <button
-              className="button"
-              type="submit"
-              style={{ display: "block", marginTop: "10px" }}
-            >
+            <div className="consentButtonbox">
+              <input
+                className="consentChecbox"
+                type="checkbox"
+                name="agree"
+                checked={formData.agree}
+                onChange={handleChange}
+              />
+              <label className="contactConsent">CONTACT CONSENT</label>
+            </div>
+
+            <button className="button" type="submit">
               SUBMIT
             </button>
           </div>
