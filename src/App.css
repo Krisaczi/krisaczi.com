@@ -1,1 +1,35 @@
+.mobile {
+  display: none;
+}
 
+@media screen and (max-width: 800px) {
+  body {
+    background-image: url("./Images/landing-page3a.png");
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .mobileBcg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mobileLogo {
+    background-image: url("./Images/KrisAcziV4.png");
+    height: 300px;
+    width: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: -75px;
+  }
+
+  .mobile {
+    display: block;
+    font-family: Cinzel;
+    font-size: 16px;
+  }
+}

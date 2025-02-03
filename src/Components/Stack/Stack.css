@@ -7,10 +7,11 @@
   font-weight: normal;
   font-style: normal;
 }
+
 .stackContainer {
-  background-repeat: no-repeat;
   background: rgba(215, 193, 156, 0.4);
   mix-blend-mode: multiply;
+  height: 100vh;
 }
 
 .stackWrapper {
@@ -59,4 +60,11 @@
 .stackLogo {
   width: 111px;
   height: 125px;
+}
+
+@media screen and (max-width: 800px) {
+  .stackContainer,
+  .stackWrapper {
+    display: none;
+  }
 }

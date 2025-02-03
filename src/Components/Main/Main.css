@@ -113,3 +113,18 @@
   -o-mix-blend-mode: multiply;
   mix-blend-mode: multiply;
 }
+
+@media screen and (max-width: 800px) {
+  .container {
+    background-image: url("../../Images/KA-watercolor1.png");
+  }
+  .stackEffect,
+  #myVideo,
+  .page-title,
+  .intro,
+  .words,
+  .content,
+  .className {
+    display: none;
+  }
+}

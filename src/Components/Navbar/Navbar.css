@@ -28,3 +28,12 @@ nav {
   text-decoration: none;
   color: black;
 }
+
+@media screen and (max-width: 800px) {
+  nav,
+  .logo,
+  .menu-items,
+  .menuLinks {
+    display: none;
+  }
+}

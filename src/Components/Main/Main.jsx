@@ -6,6 +6,7 @@ const Main = () => {
   const handleVideoError = (e) => {
     console.error("Video error:", e);
   };
+
   return (
     <>
       <div id="MAIN" className="container">

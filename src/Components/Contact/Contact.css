@@ -189,3 +189,9 @@ input:-webkit-autofill:active {
   box-shadow: 0 0 0 1000px white inset !important;
   -webkit-text-fill-color: #000 !important;
 }
+
+@media screen and (max-width: 800px) {
+  .contactContainer {
+    display: none;
+  }
+}
