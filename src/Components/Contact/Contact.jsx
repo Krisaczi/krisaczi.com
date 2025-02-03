@@ -60,19 +60,30 @@ const ContactForm = () => {
 
     emailjs
       .send(
-        "service_bhgwb0m",
-        "template_y5yei1x",
+        "service_vrohr57",
+        "template_z6qy3u9",
         templateParams,
         "muuAVIAz2lz-JcD12"
       )
       .then((response) => {
         console.log("Email successfully sent!", response.status, response.text);
         alert("Email sent successfully!");
+        clearForm();
       })
       .catch((error) => {
         console.error("Failed to send email. Error:", error);
         alert("Failed to send email.");
       });
+  };
+
+  const clearForm = () => {
+    setFormData({
+      name: "",
+      mail: "",
+      budget: "",
+      message: "",
+      agree: false,
+    });
   };
 
   return (
