@@ -13,7 +13,7 @@ function App() {
         <div className="mobileLogo"></div>
         <div className="mobile">Mobile version comming soon.</div>
         <div className="mobile">Please visit our desktop site.</div>
-        <div className="mobile">Contact at contact@krisaczi.com</div>
+        <div className="mobile">mail: contact@krisaczi.com</div>
       </div>
     </>
   );
