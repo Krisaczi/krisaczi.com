@@ -29,7 +29,7 @@ nav {
   color: black;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   nav,
   .logo,
   .menu-items,
